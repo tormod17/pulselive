@@ -1,0 +1,145 @@
+/* Stars 
+------------------------------------- */
+#space, .stars {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.stars {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: zoom 5s infinite;
+  opacity: 0;
+}
+
+.stars:nth-child(1) {
+  background-position: 50% 50%;
+  animation-delay: 0s;
+}
+.stars:nth-child(2) {
+  background-position: 20% 60%;
+  animation-delay: 1s;
+}
+.stars:nth-child(3) {
+  background-position: -20% -30%;
+  animation-delay: 2s;
+}
+.stars:nth-child(4) {
+  background-position: 40% -50%;
+  animation-delay: 3s;
+}
+.stars:nth-child(5) {
+  background-position: -20% 30%;
+  animation-delay: 4s;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+    animation-timing-function: ease-in;
+  } 
+  85% {
+    opacity: 1;
+    transform: scale(2.8);
+    animation-timing-function: linear;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3.5);
+  }
+}
+/* Demo syles 
+------------------------------------- */
+
+*{
+	color: white;
+}
+
+body {
+	background-color: #000;
+	font-family: helvetica;
+}
+section {
+  z-index: 1;
+	padding-bottom: 4em;
+  padding-top: 4em;
+  max-width: 90%;
+  margin:auto;
+  position: relative;
+}
+
+.header  {
+	  background-color:  #6e7f80;
+    margin:0em;
+}
+.team-row {
+	background: linear-gradient(#003333, #007777 );
+	margin: 0em;
+}
+form {
+	margin:1em;
+	padding-top:2em;
+  float:left;
+}
+
+ul li { 
+	display: inline-block;
+	position: relative;
+	width:5em;
+	text-align: center;
+	margin: 1em;
+
+}
+button {
+	background-color: #007777;
+	border-radius: 5px;
+	padding: 10px;
+
+}
+label {
+	font-size: 2em;
+	color: gold;
+	text-shadow: white;
+}
+
+select {
+	background-color: #007777;
+	border-radius: 5px;
+	padding: 5px;
+	
+}
+
+
+.rankings {
+  float:right;
+  z-index: -10;
+
+}
+
+#message {
+    width: 300px;
+    position: absolute;
+    top: 80%;
+    right: 40%;
+    font-size: 2em;
+}
+
+#qunit, #qunit-fixture {
+  z-index: 100;
+  position: absolute;
+  bottom: -100%;
+  right: 20%;
+}
