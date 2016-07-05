@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pulse live Rankings Table</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
+    <!-- Pure CSS is a minimalist CSS file we have included to make things look nicer -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <script type="text/javascript" src="./table.js"></script>
+</head>
+<body>
+    <div id="space">
+        <div class="stars"></div>
+        <div class="stars"></div>
+        <div class="stars"></div>
+        <div class="stars"></div>
+        <div class="stars"></div>
+    </div>
+    <section class="matchMaker">
+        <form>
+            <label for="home">Home:</label>
+            <select name="home">
+                <option value="Australia">Australia</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="France">France</option>
+                <option value="England">England</option>
+                <option value="Romania">Romania</option>
+            </select>
+            <h1>VS</h1>
+            <label for="away">Away:</label>
+            <select name="away">
+                <option value="Australia">Australia</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="France">France</option>
+                <option value="England">England</option>
+                <option value="Romania">Romania</option>
+            </select>
+            <br>
+            <br>
+            <button id="submitButton" type="button" name="submitMatch">Submit Match</button>
+        </form>
+        <div id="message">
+            Generate a Match by choosing Teams
+        </div>
+        <div class="rankings">
+           <h1>Pulse Ball Rankings Table</h1>
+    
+            <ul class="header">
+                <li>Team</li>
+                <li>Points</li>
+                <li>Position</li>
+            </ul>
+            <ul class="team-row" id="team0"></ul>
+            <ul class="team-row" id="team1"></ul>
+            <ul class="team-row" id="team2"></ul>
+            <ul class="team-row" id="team3"></ul>
+            <ul class="team-row" id="team4"></ul>
+        </div>
+    </section>
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+  
+
+</body>
+
+
+
+<script type="text/javascript" src="./app.js"></script>
+<script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
+<script type="text/javascript" src="./tests.js" ></script>
+</html>
